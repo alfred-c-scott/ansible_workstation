@@ -1,0 +1,23 @@
+---
+# non functional - just adding common packages for workstations
+# will add packages later
+- hosts: Ubuntu
+    name: update repository cache - ubuntu
+      apt:
+      
+    when: ansible_distribution == "Ubuntu"
+
+
+- hosts: Ubuntu
+    name: add reopositories to keyring
+      apt:
+    
+    when: ansible_distribution == "Ubuntu"
+
+
+- hosts: Ubuntu
+    name: install packages - Ubuntu
+    apt:
+      name: whois
+      
+    when: ansible_distribution == "Ubuntu"
