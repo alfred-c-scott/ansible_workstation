@@ -11,6 +11,7 @@
 - hosts: Ubuntu
     name: add reopositories to keyring
       # brave browser
+      # razer
       apt:
     
     when: ansible_distribution == "Ubuntu"
