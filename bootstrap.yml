@@ -19,6 +19,6 @@
 - hosts: Ubuntu
     name: install packages - Ubuntu
     apt:
-      name: whois
+      name: whois, tmux
       
     when: ansible_distribution == "Ubuntu"
