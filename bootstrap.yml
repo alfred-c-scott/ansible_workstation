@@ -20,6 +20,19 @@
 - hosts: Ubuntu
     name: install packages - Ubuntu
     apt:
-      name: whois, tmux
-      
+      name: whois, tmux      
     when: ansible_distribution == "Ubuntu"
+
+
+- hosts: Ubuntu
+  name: clone repositories
+  # https://github.com/CiscoCXSecurity/enum4linux.git
+  when: ansible_distribution == "Ubuntu"
+
+
+- hosts: Ubuntu
+  name: install VMware Player
+    # Download File
+    # chmod u+x for user
+    # --- the following command installs the VMware ---
+    # sudo ./VMware-Player-Full-17.0.2-21581411.x86_64.bundle*
