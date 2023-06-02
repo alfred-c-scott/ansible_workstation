@@ -20,7 +20,7 @@
 - hosts: Ubuntu
     name: install packages - Ubuntu
     apt:
-      name: whois, tmux, speedtest-cli, smb-client
+      name: whois, tmux, speedtest-cli, smb-client, curl
     when: ansible_distribution == "Ubuntu"
 
 
