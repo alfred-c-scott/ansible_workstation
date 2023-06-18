@@ -12,6 +12,7 @@
     name: add reopositories to keyring
       # brave browser
       # razer
+      # sudo add-apt-repository ppa:nextcloud-devs/client
       apt:
     
     when: ansible_distribution == "Ubuntu"
@@ -20,7 +21,7 @@
 - hosts: Ubuntu
     name: install packages - Ubuntu
     apt:
-      name: whois, tmux, speedtest-cli, smb-client, curl, nfs-common, vlc, qbittorrent, net-tools
+      name: whois, tmux, speedtest-cli, smb-client, curl, nfs-common, vlc, qbittorrent, net-tools, nextcloud-client
     when: ansible_distribution == "Ubuntu"
 
 
